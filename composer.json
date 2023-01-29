@@ -1,7 +1,7 @@
 {
     "name": "durecat/php-head-first-design-patterns",
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.1"
     },
     "autoload": {
         "psr-4": {

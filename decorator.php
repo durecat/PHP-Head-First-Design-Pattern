@@ -6,6 +6,7 @@ use Durecat\PhpHeadFirstDesignPatterns\Decorator\DarkRoast;
 use Durecat\PhpHeadFirstDesignPatterns\Decorator\Espresso;
 use Durecat\PhpHeadFirstDesignPatterns\Decorator\HouseBlend;
 use Durecat\PhpHeadFirstDesignPatterns\Decorator\Mocha;
+use Durecat\PhpHeadFirstDesignPatterns\Decorator\Size;
 use Durecat\PhpHeadFirstDesignPatterns\Decorator\Soy;
 use Durecat\PhpHeadFirstDesignPatterns\Decorator\Whip;
 
@@ -23,3 +24,9 @@ $beverage3 = new Soy($beverage3);
 $beverage3 = new Mocha($beverage3);
 $beverage3 = new Whip($beverage3);
 printf("%s $%.2f \n", $beverage3->getDescription(), $beverage3->cost());
+
+$beverage4 = (new HouseBlend())->setSize(Size::GRANDE);
+$beverage4 = new Soy($beverage4);
+$beverage4 = new Mocha($beverage4);
+$beverage4 = new Whip($beverage4);
+printf("%s $%.2f \n", $beverage4->getDescription(), $beverage4->cost());
