@@ -1,0 +1,17 @@
+{
+    "name": "durecat/php-head-first-design-patterns",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Durecat\\PhpHeadFirstDesignPatterns\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Duré Choi",
+            "email": "durecat@gmail.com"
+        }
+    ]
+}
