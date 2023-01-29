@@ -9,4 +9,4 @@ https://resources.oreilly.com/examples/9780596007126
 
 ## Get Started
 1. composer install
-2. php {pattern_name}.php
+2. php index.php
