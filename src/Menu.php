@@ -28,12 +28,16 @@ class Menu
             foreach ($patterns as $pattern) {
                 printf("\t[%s] %s\n", $pattern->value, $pattern->label());
             }
+            printf("\t[%s] %s\n", 'C', 'Clear Screen');
             printf("\t[%s] %s\n", 'X', 'Exit');
 
             $response = strtoupper(readline('> '));
             
             if ($response === 'X') {
                 break;
+            } elseif ($response === 'C') {
+                system('clear');
+                continue;
             }
             
             Patterns::run($response);
