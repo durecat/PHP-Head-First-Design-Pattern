@@ -1,7 +1,7 @@
 # PHP-Head-First-Design-Pattern
 
 ## Java code
-https://resources.oreilly.com/examples/9780596007126
+https://wickedlysmart.com/head-first-design-patterns/
 
 ## Requirements
 - PHP 8.1+
@@ -9,4 +9,4 @@ https://resources.oreilly.com/examples/9780596007126
 
 ## Get Started
 1. composer install
-2. php {pattern_name}.php
+2. php index.php
