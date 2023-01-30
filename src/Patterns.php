@@ -15,6 +15,22 @@ enum Patterns: string
     case ABSTRACT_FACTORY = 'F3';
 
     /**
+     * Run
+     *
+     * @param string $patternValue
+     * @return void
+     */
+    public static function run(string $patternValue): void
+    {
+        match ($patternValue) {
+            static::DECORATOR->value => new Decorator(),
+            static::SIMPLE_FACTORY->value => new SimpleFactory(),
+            static::FACTORY_METHOD->value => new FactoryMethod(),
+            static::ABSTRACT_FACTORY->value => new AbstractFactory(),
+        };
+    }
+
+    /**
     * Label
     *
     * @return string
@@ -54,22 +70,6 @@ enum Patterns: string
                 'desc' => 'Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.',
                 'link' => 'https://refactoring.guru/design-patterns/abstract-factory',
             ],
-        };
-    }
-
-    /**
-    * Run
-    *
-    * @param string $patternValue
-    * @return void
-    */
-    public static function run(string $patternValue): void
-    {
-        match ($patternValue) {
-            static::DECORATOR->value => new Decorator(),
-            static::SIMPLE_FACTORY->value => new SimpleFactory(),
-            static::FACTORY_METHOD->value => new FactoryMethod(),
-            static::ABSTRACT_FACTORY->value => new AbstractFactory(),
         };
     }
 }
