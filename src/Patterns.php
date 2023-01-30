@@ -30,6 +30,34 @@ enum Patterns: string
     }
 
     /**
+    * description
+    *
+    * @return array
+    */
+    public function description(): array
+    {
+        return match ($this) {
+            static::DECORATOR => [
+                'desc' => 'Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.',
+                'link' => 'https://refactoring.guru/design-patterns/decorator',
+            ],
+            static::SIMPLE_FACTORY =>
+            [
+                'desc' => 'The Simple factory pattern describes a class that has one creation method with a large conditional that based on method parameters chooses which product class to instantiate and then return.',
+                'link' => 'https://refactoring.guru/design-patterns/factory-comparison#:~:text=In%20most%20cases%2C%20a%20simple,of%20the%20method%20to%20subclasses.',
+            ],
+            static::FACTORY_METHOD => [
+                'desc' => 'Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.',
+                'link' => 'https://refactoring.guru/design-patterns/factory-method',
+            ],
+            static::ABSTRACT_FACTORY => [
+                'desc' => 'Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.',
+                'link' => 'https://refactoring.guru/design-patterns/abstract-factory',
+            ],
+        };
+    }
+
+    /**
     * Run
     *
     * @param string $patternValue
